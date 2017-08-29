@@ -5,8 +5,8 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    IdParentFolder: {
-      type: DataTypes.NUMBER,
+    idParent: {
+      type: DataTypes.INTEGER,
       defaultValue: null,
     }
   }, {

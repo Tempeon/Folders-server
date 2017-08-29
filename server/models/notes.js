@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     idFolder: {
       type: DataTypes.INTEGER,
-      alloNull: false,
+      allowNull: false,
     }
   }, {
     classMethods: {
