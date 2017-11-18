@@ -4,6 +4,10 @@ module.exports = (sequelize, DataTypes) => {
     Name: {
       type:DataTypes.STRING,
       allowNull: false,
+    },
+    idNote: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     }
   }, {
     classMethods: {

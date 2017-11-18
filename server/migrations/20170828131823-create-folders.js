@@ -14,7 +14,13 @@ module.exports = {
       },
       idParent: {
         type: Sequelize.INTEGER,
-        defaultValue: '0',
+        defaultValue: null,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Folders',
+          key: 'id',
+          as: 'idParent'
+        }
       },
       createdAt: {
         allowNull: false,

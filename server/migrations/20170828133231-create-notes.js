@@ -16,12 +16,20 @@ module.exports = {
         type: Sequelize.STRING,
         defaultValue: 'null',
       },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
       idFolder: {
         type: Sequelize.INTEGER,
         onDelete: 'CASCADE',
         references: {
           model: 'Folders',
-          ket: 'id',
+          key: 'id',
           as: 'idFolder'
         }
       }

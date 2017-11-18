@@ -7,6 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     idParent: {
       type: DataTypes.INTEGER,
+      allowNull: true,
       defaultValue: null,
     }
   }, {
@@ -16,6 +17,11 @@ module.exports = (sequelize, DataTypes) => {
           foreignKey: 'idFolder',
           as: 'notes',
         });
+        Folders.hasMany(models.Folders, {
+          foreignKey: 'idParent',
+          as: 'folders',
+          onDelete: 'CASCADE',
+        })
       },
     },
   });
